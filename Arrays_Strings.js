@@ -15,7 +15,7 @@ function camelize(str) {
 // returns new array with numbers between a and b
   function filterRange(arr, a, b){
     return arr.filter((e) => {
-      return (e >= a && e <= b)
+      return (e >= a && e <= b);
     })
   }
 
@@ -37,5 +37,14 @@ function filterRangeInPlace(arr, a, b){
 // sort array
 arr.sort((a, b) => a-b);
 
-//sort array in reverse
+// sort array in reverse
 arr.sort((a, b) => b-a);
+
+// make new array with sorted strings
+function copySorted(arr){
+	return arr.map((e) => e).sort();
+}
+// OR
+function copySorted(arr){
+	return arr.slice().sort();
+}
